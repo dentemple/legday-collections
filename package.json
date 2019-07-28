@@ -1,11 +1,54 @@
 {
   "name": "armstrong",
   "version": "1.0.0",
-  "description": "Mobile CMS for Debt Collection Contractors",
-  "main": "server/index.js",
-  "author": "Denny S. Temple <dev@dentemple.com> (https://dentemple.com)",
+  "description": "Mobile-first CMS for Debt Collection",
+  "main": "dist",
+  "author": "Denny S. Temple <dev@dentemple.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "test": "jest -i"
+    "start": "npm run build:ts && npm run start:server",
+    "start:server": "node dist",
+    "dev": "npm run dev:server",
+    "dev:server": "nodemon dist",
+    "build:ts": "tsc",
+    "test": "jest -i",
+    "test:watch": "jest -i --watch",
+    "audit": "npm audit --fix",
+    "audit:check": "npm audit",
+    "update": "ncu -u && npm install && npm run audit",
+    "update:check": "ncu"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
+    "@types/supertest": "^2.0.8",
+    "husky": "^3.0.1",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.1",
+    "nodemon": "^1.19.1",
+    "npm-check-updates": "^3.1.20",
+    "prettier": "^1.18.2",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
