@@ -1,0 +1,11 @@
+{
+  "name": "armstrong",
+  "version": "1.0.0",
+  "description": "Mobile CMS for Debt Collection Contractors",
+  "main": "server/index.js",
+  "author": "Denny S. Temple <dev@dentemple.com> (https://dentemple.com)",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest -i"
+  }
+}
