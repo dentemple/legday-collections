@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Device } from 'twilio-client'
 
-export default function App() {
+function Prototype() {
   const [ping, setPing] = useState({})
   const [token, setToken] = useState('')
   const [callStatus, setCallStatus] = useState('Unknown')
@@ -85,3 +85,5 @@ export default function App() {
     </div >
   );
 }
+
+export default Prototype
