@@ -1,5 +1,5 @@
 import { createIntl, createIntlCache } from 'react-intl'
-import config, { locale, messages } from 'intl'
+import config, { locale, messages } from 'utils/intl'
 
 const cache = createIntlCache()
 
@@ -13,7 +13,7 @@ const intl = createIntl(
 
 export default function rejectRequestWithError({ rejectWithValue }) {
   return rejectWithValue({
-    message: intl.formatMessage({ id: 'errors.global.fetch.message' }),
-    name: intl.formatMessage({ id: 'errors.global.fetch.name' })
+    message: intl.formatMessage({ id: 'global.errors.requests.message' }),
+    name: intl.formatMessage({ id: 'global.errors.requests.name' })
   })
 }

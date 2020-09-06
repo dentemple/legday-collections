@@ -1,3 +1,3 @@
-import { metadata } from 'utils/data'
+import { metadata } from 'utils/app'
 
 export default { ...metadata }

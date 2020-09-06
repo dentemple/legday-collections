@@ -1,4 +1,4 @@
-export default {
+const initialState = {
   createdAt: undefined,
   displayName: undefined,
   fullname: undefined,
@@ -6,3 +6,5 @@ export default {
   lastLoggedInAt: undefined,
   username: undefined
 }
+
+export default initialState

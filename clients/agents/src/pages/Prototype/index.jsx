@@ -1,36 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { Device } from 'twilio-client'
 
-function Prototype() {
+export default function Prototype() {
   const [ping, setPing] = useState({})
   const [token, setToken] = useState('')
   const [callStatus, setCallStatus] = useState('Unknown')
 
   function fetchPing() {
     fetch('/api/dialer/v1')
-      .then(res => res.json())
-      .then(json => void setPing(json))
-      .catch(err => {
+      .then((res) => res.json())
+      .then((json) => void setPing(json))
+      .catch((err) => {
         setPing(err)
       })
   }
 
   async function fetchToken() {
     fetch('/api/dialer/v1/auth/token')
-      .then(res => res.json())
-      .then(json => {
+      .then((res) => res.json())
+      .then((json) => {
         const { token } = json
         setToken(token)
         Device.setup(token)
         Device.ready(function (device) {
-          setCallStatus("Ready");
+          setCallStatus('Ready')
         })
       })
-      .catch(err => {
+      .catch((err) => {
         setToken('')
-        setCallStatus("Error: ", err)
+        setCallStatus('Error: ', err)
       })
-
   }
 
   useEffect(() => {
@@ -39,17 +38,17 @@ function Prototype() {
   }, [])
 
   Device.connect(function (connection) {
-    if ("phoneNumber" in connection.message) {
-      setCallStatus("In call with " + connection.message.phoneNumber);
+    if ('phoneNumber' in connection.message) {
+      setCallStatus('In call with ' + connection.message.phoneNumber)
     } else {
       // This is a call from a website user to a support agent
-      setCallStatus("In call with support");
+      setCallStatus('In call with support')
     }
     connection.accept()
   })
 
   Device.disconnect(function (_) {
-    setCallStatus("Ready");
+    setCallStatus('Ready')
   })
 
   const tokenStyle = {
@@ -66,24 +65,16 @@ function Prototype() {
       <h2>Server Response</h2>
       <small>
         <pre>
-          <code>
-            {JSON.stringify(ping, null, 2)}
-          </code>
+          <code>{JSON.stringify(ping, null, 2)}</code>
         </pre>
       </small>
       <h2>Token</h2>
-      <p style={tokenStyle}>
-        {token}
-      </p>
+      <p style={tokenStyle}>{token}</p>
       <h2>Device is Ready</h2>
-      <p style={{ fontFamily: 'monospace' }}>
-        {callStatus}
-      </p>
+      <p style={{ fontFamily: 'monospace' }}>{callStatus}</p>
       <h2>Actions</h2>
       <button onClick={() => void Device.connect()}>Make Call</button>
       <button onClick={() => void Device.disconnectAll()}>Disconnect Call</button>
-    </div >
-  );
+    </div>
+  )
 }
-
-export default Prototype

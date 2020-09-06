@@ -1,6 +1,8 @@
-export default {
+const user = {
   createdAt: 1599350938,
-  displayName: 'Testy',
-  fullname: 'Testy McTestface',
-  username: 'testy2020'
+  displayName: 'John',
+  fullname: 'John F Kennedy',
+  username: 'jfk1917'
 }
+
+export default user

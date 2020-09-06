@@ -5,12 +5,17 @@ import { rejectRequestWithError } from 'utils/app'
 export const fetchUserLogin = createAsyncThunk('user/auth/login', async function (_, { rejectWithValue }) {
   try {
     const module = await import('utils/mocks/user')
-    return module.default
-  } catch (_) {
+    const json = module.default
+
+    return json
+  } catch (err) {
+    console.log(err)
     return rejectRequestWithError({ rejectWithValue })
   }
 })
 
-export default {
+const actions = {
   fetchUserLogin
 }
+
+export default actions

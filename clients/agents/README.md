@@ -1,4 +1,6 @@
-# ARMstrong Agents Client
+# Vestery App (_temp name_)
+
+> Contractors client for the Armstrong suite of applications
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

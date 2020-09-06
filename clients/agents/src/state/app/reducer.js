@@ -1,4 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit'
 import initialState from './initialState'
 
-export default createReducer(initialState, {})
+const reducer = createReducer(initialState, {})
+
+export default reducer

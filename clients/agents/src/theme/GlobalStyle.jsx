@@ -89,21 +89,30 @@ table {
 }
 
 /* -----------------------------------------*/
-*, *:before, *:after {
-  box-sizing: border-box;
+html {
+  height: 100%;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.black};
+  font-size: ${({ baseFontSize }) => baseFontSize || '16px'};
+  font-family: ${({ theme }) => theme.fonts.primary};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+div#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: ${({ theme }) => theme.fonts.monospace};
 }
 `
 
