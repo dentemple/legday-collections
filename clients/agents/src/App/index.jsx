@@ -1,13 +1,14 @@
 import React from 'react'
 
-import Routes from 'App/Routes'
-import { Layout } from 'components/templates'
+import { GlobalStyle } from 'theme'
+import Routes from './Routes'
 
 function App() {
   return (
-    <Layout>
+    <>
+      <GlobalStyle />
       <Routes />
-    </Layout>
+    </>
   )
 }
 

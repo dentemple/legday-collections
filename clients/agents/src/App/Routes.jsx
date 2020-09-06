@@ -3,12 +3,30 @@ import { Switch, Route } from 'react-router-dom'
 
 import * as Pages from 'pages'
 
+const routes = [
+  {
+    key: 'dial',
+    path: '/dial',
+    component: Pages.Keypad
+  },
+  {
+    key: 'prototype',
+    path: '/prototype',
+    component: Pages.Prototype
+  },
+  {
+    key: 'home',
+    path: ['/', '/home'],
+    component: Pages.Home
+  }
+]
+
 function Routes() {
   return (
     <Switch>
-      <Route path="/keypad" component={Pages.Keypad} />
-      <Route path="/prototype" component={Pages.Prototype} />
-      <Route path={["/", "/home"]} component={Pages.Home} />
+      {routes.map((route) => (
+        <Route {...route} />
+      ))}
     </Switch>
   )
 }

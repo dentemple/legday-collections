@@ -6,6 +6,8 @@
   "author": "Denny S. Temple <dev@dentemple.com>",
   "license": "UNLICENSED",
   "scripts": {
+    "start:server:dialer": "cd servers/dialer && npm run start",
+    "start:client:agents": "cd clients/agents && npm run start",
     "update": "ncu -u && npm install && npm audit fix",
     "update:check": "ncu"
   },
