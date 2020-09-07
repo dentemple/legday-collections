@@ -1,8 +1,12 @@
-# Vestery App (_temp name_)
+# Vestery Dialer App (_temp name_)
 
-> Contractors client for the Armstrong suite of applications
+> Contractors Dialer Client for the Armstrong suite of applications
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Deployment
+
+[Current Site](https://stoic-colden-651271.netlify.app/)
 
 ## Available Scripts
 
