@@ -2,15 +2,16 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 
 /* state */
 import requests from './_requests'
+import stateUtils from './utils'
 
 /* utils */
 import { rejectRequestWithError } from 'utils/app'
 
-export const fetchCurrentUser = createAsyncThunk('user/auth/login', async function (_, thunkAPI) {
+export const fetchLogin = createAsyncThunk('request/auth/login', async function (params, thunkAPI) {
   const { rejectWithValue } = thunkAPI
 
   try {
-    const res = await requests.getCurrentUser()
+    const res = await requests.postAuthLogin(stateUtils.whitelistLogin(params))
 
     switch (res.status) {
       case 200:
@@ -25,7 +26,7 @@ export const fetchCurrentUser = createAsyncThunk('user/auth/login', async functi
 })
 
 const actions = {
-  fetchCurrentUser
+  fetchLogin
 }
 
 export default actions

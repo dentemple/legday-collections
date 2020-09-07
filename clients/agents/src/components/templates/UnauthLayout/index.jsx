@@ -4,14 +4,15 @@ import styled from 'styled-components'
 import { Box } from 'components/atoms'
 
 /**
- * LoginPageContainer
+ * UnauthLayout component
  */
-
-const LoginPageContainer = styled(Box)`
-  color: ${({ theme }) => theme.colors.white};
+const UnauthLayout = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
 
   height: 90%;
 
@@ -20,4 +21,4 @@ const LoginPageContainer = styled(Box)`
   }
 `
 
-export default LoginPageContainer
+export default UnauthLayout

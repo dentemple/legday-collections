@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { Device } from 'twilio-client'
 
+/* state */
+import { actions as appActions } from 'state/app'
+
+/**
+ * Prototype component
+ */
 export default function Prototype() {
   const [ping, setPing] = useState({})
   const [token, setToken] = useState('')
   const [callStatus, setCallStatus] = useState('Unknown')
+
+  /* effect hooks */
+  useEffect(() => void appActions.setIsAuthRoute(true), [])
 
   function fetchPing() {
     fetch('/api/dialer/v1')

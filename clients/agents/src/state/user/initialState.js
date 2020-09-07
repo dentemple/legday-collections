@@ -1,10 +1,11 @@
 const initialState = {
   createdAt: undefined,
   displayName: undefined,
+  fetchStatus: undefined,
   fullname: undefined,
-  isAuth: false,
-  lastLoggedInAt: undefined,
-  username: undefined
+  headerUrl: undefined,
+  isCurrentUser: false,
+  profileUrl: undefined
 }
 
 export default initialState

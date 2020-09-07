@@ -19,11 +19,6 @@ export const unauthRoutes = [
 
 export const authRoutes = [
   {
-    key: 'dial',
-    path: routes.dial,
-    component: Pages.Keypad
-  },
-  {
     key: 'prototype',
     path: routes.prototype,
     component: Pages.Prototype

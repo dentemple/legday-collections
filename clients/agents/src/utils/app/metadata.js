@@ -1,11 +1,9 @@
 const metadata = {
-  appName: 'Vestery Dialer',
+  appName: 'Vestery',
   appKey: 'vestery-dialer',
   baseUrl: generateBaseUrlFromEnvVariables(process.env),
   useTestIntl: process.env.REACT_APP_LANGUAGE_TEST || undefined
 }
-
-console.log(process.env.REACT_APP_LANGUAGE_TEST, process.env.REACT_APP_LANGUAGE_TEST || false)
 
 function generateBaseUrlFromEnvVariables(processEnv = {}) {
   switch (processEnv.REACT_APP_ARMSTRONG_ENVIRONMENT) {

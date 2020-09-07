@@ -94,8 +94,8 @@ html {
 }
 
 body {
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ isAuthRoute, theme }) => (isAuthRoute ? theme.colors.white : theme.colors.primary)};
+  color: ${({ isAuthRoute, theme }) => (isAuthRoute ? theme.colors.primary : theme.colors.white)};
   font-size: ${({ baseFontSize }) => baseFontSize || '16px'};
   font-family: ${({ theme }) => theme.fonts.primary};
   -webkit-font-smoothing: antialiased;

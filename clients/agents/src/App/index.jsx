@@ -6,17 +6,19 @@ import { GlobalStyle } from 'theme'
 import Routes from './Routes'
 
 /* state */
+import { selectors as appSelectors } from 'state/app'
 import { selectors as userSelectors } from 'state/user'
 
 /**
- * App
+ * App component
  */
 export default function App() {
   const isAuth = useSelector(userSelectors.selectIsAuth)
+  const isAuthRoute = useSelector(appSelectors.selectIsAuthRoute)
 
   return (
     <>
-      <GlobalStyle isAuth={isAuth} />
+      <GlobalStyle isAuthRoute={isAuthRoute} />
       <Routes isAuth={isAuth} />
     </>
   )
