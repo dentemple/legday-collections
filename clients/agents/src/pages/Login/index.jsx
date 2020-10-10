@@ -45,6 +45,7 @@ export default function Home() {
       const action = await dispatch(authActions.fetchLogin(state))
       await unwrapResult(action)
 
+      console.log('push >>', routes.home)
       history.push(routes.home)
     } catch (err) {
       console.warn(err)

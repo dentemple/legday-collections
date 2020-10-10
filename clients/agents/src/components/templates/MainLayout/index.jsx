@@ -7,12 +7,12 @@ import PropTypes from 'prop-types'
 export default function MainLayout({ children }) {
   return (
     <>
-      <main>{children}</main>
+      <main style={{ minHeight: '100%', width: '100%' }}>{children}</main>
     </>
   )
 }
 
 /* props */
 MainLayout.propTypes = {
-  children: PropTypes.elementType
+  children: PropTypes.element
 }

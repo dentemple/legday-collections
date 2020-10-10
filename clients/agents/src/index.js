@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
 /* components */
@@ -12,11 +12,9 @@ render(App)
 
 function render(Component) {
   return ReactDOM.render(
-    <StrictMode>
-      <Providers>
-        <App />
-      </Providers>
-    </StrictMode>,
+    <Providers>
+      <App />
+    </Providers>,
     document.getElementById('root')
   )
 }

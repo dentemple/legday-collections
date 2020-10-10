@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import { useSelector } from 'react-redux'
 
 /* components */
@@ -7,19 +7,21 @@ import Routes from './Routes'
 
 /* state */
 import { selectors as appSelectors } from 'state/app'
-import { selectors as userSelectors } from 'state/user'
+import { selectors as authSelectors } from 'state/auth'
 
 /**
  * App component
  */
 export default function App() {
-  const isAuth = useSelector(userSelectors.selectIsAuth)
+  const isAuth = useSelector(authSelectors.selectIsAuth)
   const isAuthRoute = useSelector(appSelectors.selectIsAuthRoute)
 
   return (
     <>
       <GlobalStyle isAuthRoute={isAuthRoute} />
-      <Routes isAuth={isAuth} />
+      <StrictMode>
+        <Routes isAuth={isAuth} />
+      </StrictMode>
     </>
   )
 }

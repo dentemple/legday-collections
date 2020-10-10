@@ -5,6 +5,4 @@ const endpoints = {
   user: `${metadata.baseUrl}/user`
 }
 
-console.log(endpoints.currentUser)
-
 export default endpoints
