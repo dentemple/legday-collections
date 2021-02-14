@@ -1,5 +1,6 @@
 /* components */
-import GlobalStyle from 'App/style/GlobalStyle'
+import AppContainer from 'App/design/AppContainer'
+import GlobalStyle from 'App/design/GlobalStyle'
 import Routes from 'App/Routes'
 
 /**
@@ -9,7 +10,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Routes />
+      <AppContainer>
+        <Routes />
+      </AppContainer>
     </>
   )
 }

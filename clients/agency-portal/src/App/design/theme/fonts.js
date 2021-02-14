@@ -1,11 +1,14 @@
 const primaryFont = {
-  primary: 'serif'
+  primary: `'Source Serif Pro', serif`,
+  primaryWeight: 400
 }
 
 const secondaryFont = {
-  secondary: `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  secondary: `'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif`
+  sans-serif`,
+  secondaryWeight: 400,
+  secondaryWeightLighter: 200
 }
 
 const monospaceFont = {

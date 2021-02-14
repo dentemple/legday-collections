@@ -11,7 +11,7 @@ import { config } from 'i18n'
 
 // styling
 import { ThemeProvider } from 'styled-components'
-import theme from 'App/style/theme'
+import theme from 'App/design/theme'
 
 /**
  * Top-level component

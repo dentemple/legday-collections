@@ -1,9 +1,54 @@
 import { createGlobalStyle } from 'styled-components'
+import * as fonts from 'assets/fonts'
 
 /**
  * App-level component
  */
 const GlobalStyle = createGlobalStyle`
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url(${fonts.SourceSerifProRegular}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url(${fonts.SourceSerifProItalic}) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url(${fonts.SourceSerifProBold}) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(${fonts.MontserratRegular}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(${fonts.MontserratItalic}) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(${fonts.MontserratBold}) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(${fonts.MontserratExtraLight}) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
 /* -------------------------------------------------- */ /* css reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -64,23 +109,51 @@ html {
 }
 
 body {
+	/* flex */
+	display: flex;
+	flex-direction: column;
+
+	/* layout */
 	height: 100%;
 	margin: 0;
 
 	/* typography */
 	font-family: ${({ theme }) => theme.fonts.primary};
+	font-weight: ${({ theme }) => theme.fonts.primaryWeight};
 	line-height: 20px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 div#root {
+	/* flex */
+	display: flex;
+	flex-direction: column;
+
+/* position */
 	position: relative;
+
+	/* layout */
 	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: ${({ theme }) => theme.fonts.secondary};
+	font-size: 1.4rem;
+	line-height: 1
+}
+
+h1 {
+	font-weight: ${({ theme }) => theme.fonts.secondaryWeightLighter};
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight: ${({ theme }) => theme.fonts.secondaryWeight};
 }
 
 code {
 	font-family: ${({ theme }) => theme.fonts.monospace};
+	font-weight: ${({ theme }) => theme.fonts.monospaceWeight};
 }
 
 select {
