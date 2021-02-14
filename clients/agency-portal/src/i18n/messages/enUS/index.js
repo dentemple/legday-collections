@@ -1,6 +1,6 @@
 const app = {
-  'app.title.full': 'Leg Day Collections Software',
-  'app.title.short': 'Leg Day'
+  'app.title.full': 'Legday Collections Software',
+  'app.title.short': 'Legday'
 }
 
 const state = {

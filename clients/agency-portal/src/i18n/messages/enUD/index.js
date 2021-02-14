@@ -1,6 +1,6 @@
 const app = {
-  'app.title.full': 'ǝɹɐʍʇɟoS suoᴉʇɔǝlloƆ ʎɐp ƃǝ˥',
-  'app.title.short': 'ʎɐp ƃǝ˥'
+  'app.title.full': 'ǝɹɐʍʇɟoS suoᴉʇɔǝlloƆ ʎɐpƃǝ˥',
+  'app.title.short': 'ʎɐpƃǝ˥'
 }
 
 const state = {

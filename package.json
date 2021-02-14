@@ -1,5 +1,5 @@
 {
-  "name": "debt-cms",
+  "name": "legday",
   "version": "1.0.0",
   "private": true,
   "author": "Denny S. Temple <dev@dentemple.com>",
@@ -7,10 +7,10 @@
   "scripts": {
     "---- directory scripts ----": "echo",
     "postinstall": "run-p install:*",
-    "install:admin": "cd clients/admin && yarn install",
+    "install:agency": "cd clients/agency-portal && yarn install",
     "---- start scripts ----": "echo",
-    "start": "concurrently --kill-others-on-fail \"yarn start:admin\"",
-    "start:admin": "cd clients/admin && yarn start",
+    "start": "concurrently --kill-others-on-fail \"yarn start:agency\"",
+    "start:agency": "cd clients/agency-portal && yarn start",
     "---- housekeeping scripts ----": "echo"
   },
   "dependencies": {
