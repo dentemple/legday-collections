@@ -1,14 +1,19 @@
 {
   "name": "agency-portal",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@testing-library/user-event": "^12.7.1",
     "date-fns": "^2.17.0",
-    "dotenv-safe": "^8.2.0",
     "history": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -27,11 +32,18 @@
     "web-vitals": "^1.0.1",
     "whatwg-fetch": "^3.5.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@types/redux-mock-store": "^1.0.2",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
+    "customize-cra": "^1.0.0",
+    "enzyme": "^3.11.0",
+    "husky": ">=4",
+    "intl": "^1.2.5",
+    "jest-fetch-mock": "^3.0.3",
+    "lint-staged": ">=10",
+    "prettier": "^2.2.1",
+    "react-app-rewired": "^2.1.8",
+    "redux-mock-store": "^1.5.4"
   },
   "eslintConfig": {
     "extends": [
@@ -51,15 +63,12 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/redux-mock-store": "^1.0.2",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
-    "customize-cra": "^1.0.0",
-    "enzyme": "^3.11.0",
-    "intl": "^1.2.5",
-    "jest-fetch-mock": "^3.0.3",
-    "prettier": "^2.2.1",
-    "react-app-rewired": "^2.1.8",
-    "redux-mock-store": "^1.5.4"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }

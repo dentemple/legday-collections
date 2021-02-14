@@ -1,21 +1,33 @@
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 
-/* styles */
-import './index.css'
+/* polyfills */
+import 'whatwg-fetch'
 
 /* components */
-import App from './App'
+import { Providers } from './Providers'
 
 /* utils */
-import reportWebVitals from './utils/app/reportWebVitals'
+import { reportWebVitals } from 'utils/app'
 
-ReactDOM.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  document.getElementById('root')
-)
+const render = () => {
+  const App = require('./App').default
+
+  ReactDOM.render(
+    <Providers>
+      <StrictMode>
+        <App />
+      </StrictMode>
+    </Providers>,
+    document.getElementById('root')
+  )
+}
+
+render()
+
+if (process.env.NODE_ENV === 'development' && module.hot) {
+  module.hot.accept('./App', render)
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
