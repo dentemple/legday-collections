@@ -1,5 +1,5 @@
 # editor
-.vscode/settings.json
+.vscode
 
 # Build files
 dist/

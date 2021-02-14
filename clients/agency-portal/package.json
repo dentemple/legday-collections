@@ -1,0 +1,65 @@
+{
+  "name": "agency-portal",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "date-fns": "^2.17.0",
+    "dotenv-safe": "^8.2.0",
+    "history": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
+    "react-intl": "^5.12.3",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "react-tooltip": "^4.2.13",
+    "rebass": "^4.0.7",
+    "redux-logger": "^3.0.6",
+    "serialize-error": "^8.0.1",
+    "slugify": "^1.4.6",
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
+    "web-vitals": "^1.0.1",
+    "whatwg-fetch": "^3.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/redux-mock-store": "^1.0.2",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
+    "customize-cra": "^1.0.0",
+    "enzyme": "^3.11.0",
+    "intl": "^1.2.5",
+    "jest-fetch-mock": "^3.0.3",
+    "prettier": "^2.2.1",
+    "react-app-rewired": "^2.1.8",
+    "redux-mock-store": "^1.5.4"
+  }
+}
